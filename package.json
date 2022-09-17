@@ -15,5 +15,17 @@
   "bugs": {
     "url": "https://github.com/ajajrajguru95/tentwenty/issues"
   },
-  "homepage": "https://github.com/ajajrajguru95/tentwenty#readme"
+  "homepage": "https://github.com/ajajrajguru95/tentwenty#readme",
+    "devDependencies": {
+    "browser-sync": "^2.26.12",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-notify": "^3.2.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemap": "^1.0.1",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-uglify-js": "0.0.4"
+  }
 }
