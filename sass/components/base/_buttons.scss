@@ -3,3 +3,13 @@
 //  ==========================================================================
 
 // Standard default button class
+
+.tt-btn{
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: 4px 15px;
+	@include font-rem(15px,24px);
+	color: var(--positive);
+	border: 1px solid;
+}

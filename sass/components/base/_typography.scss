@@ -29,6 +29,7 @@ body {
   font-size: var(--htmlFontSize);
   line-height: $baseLineHeight;
   color: $baseTextColor;
+  margin: 0;
   background-color: color(body_bg);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -52,22 +53,12 @@ h5, .h5,
 h6, .h6 {
   font-style: normal;
   @extend .font-weight-bold;
-  font-family: $secondaryFontFamily;
-  text-transform: uppercase;
-  margin-bottom: 0;
 }
 
 h1, .h1 {
-    @include font-rem(90px,86px);
+    @include font-rem(60px,68px);
     @include bp(tablet-sm){
         @include font-rem(38px,36px);
-    }
-
-    &.h1-b2b{
-      @include font-rem(53px,50px);
-      @include bp(tablet-sm){
-           @include font-rem(24px,22px);
-      }
     }
 }
 
@@ -76,14 +67,6 @@ h2, .h2 {
     @include bp(tablet-sm){
       @include font-rem(16px,23px);
     }
-
-    &.h2-b2b{
-      @include font-rem(42px,40px);
-      @include bp(tablet-sm){
-          @include font-rem(24px,24px);
-      }
-    }
-
 }
 
 h3, .h3 {
@@ -91,13 +74,6 @@ h3, .h3 {
    @include bp(tablet-sm){
       @include font-rem(12px,98px);
    }
-
-    &.h3-b2b{
-      @include font-rem(26px,33px);
-      @include bp(tablet-sm){
-           @include font-rem(16px,23px);
-      }
-    }
 }
 
 h4, .h4 {
@@ -105,13 +81,6 @@ h4, .h4 {
    @include bp(tablet-sm){
       @include font-rem(11px,98px);
    }
-
-    &.h4-b2b{
-      @include font-rem(23px,29px);
-      @include bp(tablet-sm){
-           @include font-rem(14px,18px);
-      }
-    }
 }
 
 h5, .h5 {
@@ -119,13 +88,6 @@ h5, .h5 {
    @include bp(tablet-sm){
       @include font-rem(10px,98px);
    }
-
-   &.h5-b2b{
-      @include font-rem(19px,23px);
-      @include bp(tablet-sm){
-          @include font-rem(14px,18px);
-      }
-    }
 }
 
 h6, .h6 {
@@ -146,13 +108,9 @@ img{
 }
 
 a{
-  color: color(secondary,base);
-  @include font-rem(20px,28px);
-  @extend .font-weight-medium;
   text-decoration: none;
-
+  transition: all var(--transitionSpeed) var(--transitionType);
   &:hover{
-    color: color(secondary,base);
     text-decoration: none;
   }
 }

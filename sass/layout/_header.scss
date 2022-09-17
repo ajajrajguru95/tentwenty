@@ -1,2 +1,59 @@
 // Header styles
 
+// Header Size and Spacing
+.tt-header{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding-top: 40px;
+}
+
+
+
+// Header Logo and nav styling
+.tt-header{
+	ul{
+		padding: 0;
+		margin: 0;
+	    list-style: none;
+	    li{
+	    	&:not(:first-child){
+	    		margin-left: 30px; //Spacing is asymmetric in design so follow a common one.
+	    	}
+	    }
+		a{
+			@include font-rem(15px,19px);
+			color: var(--positive);
+			@include bp(hover){
+				color: var(--negative);
+			}
+		}
+		&.secondary-nav{
+			a{
+				@include font-rem(14px);
+			}
+		}
+	}
+	&__nav{
+		padding-left: 80px;
+		@include bp(desktop-lg){		
+			padding-left: 161px;
+		}
+	}
+}
+
+// Search bar and CTA
+.tt-header{
+	&__search{
+		.searchbutton{
+			display: inline-flex;
+			width: 33px;
+			aspect-ratio: 1 / 1;
+			align-items: center;
+			justify-content: center;
+			border-radius: 50%;
+			border: 1px solid var(--positive);
+		}
+	}
+}

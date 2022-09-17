@@ -3,44 +3,19 @@
   COMMON VARIABLES
   ========================================================================== */
 
-// Root sizing control as per feedback
 
 // Color variable map
 $colors: (
   // non-nested values
   body_bg: #FFFFFF,
-  section_bg: #F8F8F8,
-  border: #DFF1F8,
-  failure: #eb7267,
-  error: #E3000B,
-  success: #2AB740,
-  white: #fff,
-  black: #000,
-  disabled: #EBEBEB,
-  grey : #E0E0E0,  
-  greylight: #F4F4F4,
-  greydark: #9FA8B2,
-  greydarker: #75808C,
-  badge: #F09402,
-  statusStop : #C40303,
-  category : #C3E5D2,
+  cloud: #fff,
+  bat: #000,
   // nested map inception
-  text: #121E4D,
-  primary: (
-   base: #121E4D,
-   dark : #273c84,
-   darker: #071033,
-   light: #1C2D65,
-   lighter: #2C3A6F,
+  text: #000,
+  category: (
+   primary: #E9DDCF,
+   secondary : #07424D,
   ),
-  secondary: (
-    base: #11998E,
-    light: #00C181,
-    lighter: #DBEDE3,
-    dark: #38ef7d,
-    darker: #25C685,
-    hover: #D0EADC,
-  )
 );
 
 // Usage
@@ -55,13 +30,10 @@ $mobileSpacing : 24px;
 
 // TYPOGRAPHY
 //   ==========================================================================
-// $htmlFontSize: 16px;
-$htmlFontSize : var(--htmlFontSize); //For phase2 to have smaller sizes as per feedback
+$htmlFontSize: 16px;
 $baseFontSize: 16px;
-$baseFontFamily: 'forma-djr-micro', sans-serif;
-$secondaryFontFamily: 'ff-cocon-pro', sans-serif;
-$tertiaryFontFamily: 'aktiv-grotesk', sans-serif;
-$font-awesome: 'FontAwesome';
+$baseFontFamily: 'Poppins', sans-serif;
+$secondaryFontFamily: 'Cormorant', sans-serif;
 $baseLineHeight: 1.5;
 $baseTextColor: color(text);
 
@@ -69,7 +41,7 @@ $baseTextColor: color(text);
 // ==========================================================================
 //  MIN HEIGHT FOR CONTAINER
 //  ==========================================================================
-$min-height-wrapper-desktop: 58vh;
+$min-height-wrapper-desktop: 100vh;
 $min-height-wrapper-mobile: 63vh;
 
 

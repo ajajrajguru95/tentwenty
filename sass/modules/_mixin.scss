@@ -53,41 +53,8 @@
   @if $query == desktop-lg {
     @media (min-width: 1600px) { @content; }
   }
-  @if $query == desktop-mid {
-    @media (min-width: 1500px) { @content; }
-  }
-  @else if $query == mid-screen {
-    @media (min-width: 1024px) and (max-width: 1600px) { @content; }
-  }
-  @else if $query == desktop-md {//not used
-    @media (min-width: 1200px) { @content; }
-  }
-  @else if $query == desktop-md-table {
-    @media (min-width: 1300px) { @content; }
-  }
-  @else if $query == desktop-xl {//not used
-    @media (min-width: 1471px) { @content; }
-  }
-  @else if $query == custom-screen {//not used
-    @media (min-width: 1366px) and (max-width: 1899px) { @content; }
-  }
-  @else if $query == desktop-custom {//not used
-     @media (min-width: 1024px) and (max-width: 1200px) { @content; }
-  }
-  @else if $query == desktop-xl-mid {
-     @media (min-width: 1201px) and (max-width: 1470px) { @content; }
-  }
-  @else if $query == custom-mid-size {
-     @media (min-width: 1024px) and (max-width: 1599px) { @content; }
-  }
-  @else if $query == mini-cart-query {
-     @media (min-width: 992px) and (max-width: 1365px) { @content; }
-  }
   @else if $query == standard-desktop {
      @media (min-width: 992px) and (max-width: 1280px) { @content; }
-  }
-  @else if $query == standard-desktop-mid {
-     @media (min-width: 992px) and (max-width: 1200px) { @content; }
   }
   @else if $query == tablet-md {
     @media (min-width: 992px) { @content; }
@@ -101,27 +68,16 @@
   @else if $query == tablet-only {//not used
     @media (min-width: 768px) and (max-width: 768px)  { @content; }
   }
-  @else if $query == tablet {
-    @media (min-width: 768px) { @content; }
-  }
   @else if $query == mobile {
     @media (max-width: 767px)  { @content; }
-  }
-  @else if $query == responsive { // this is only for header. please do not use anywhere else
-    @media (max-width: 1024px)  { @content; }
-  }
-  @else if $query == desktop-head { // this is only for header. please do not use anywhere else
-    @media (min-width: 1025px)  { @content; }
-  }
-  @else if $query == mid-head { // this is only for header. please do not use anywhere else
-    @media (min-width: 1025px) and (max-width: 1199px)  { @content; }
   }
   @else if $query == xs {
     @media (max-width: 320px)  { @content; }
   }
-  @else if $query == tablet-between {
-    @media (min-width: 992px) and (max-width: 1199px)  { @content; }
-  } 
+  @else if $query == hover {
+    @media (hover: hover) { &:hover{@content;} }
+  }
+  
 }
 
 

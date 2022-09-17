@@ -1,0 +1,8 @@
+
+// CSS variables for dynamic change
+:root{
+  --positive: #{color(cloud)};
+  --negative: #{color(bat)};
+  --transitionSpeed : 0.35s;
+  --transitionType : ease;
+}
