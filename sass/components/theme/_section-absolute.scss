@@ -1,0 +1,53 @@
+
+// Section 2 - The floating images
+.section-absolute{
+	padding-top: 149px;
+
+	&__content{
+		margin-left: auto;
+		@include bp(tablet-md){
+			max-width: 643px;
+			padding-right: 214px;
+		}
+		@include bp(desktop-lg){
+			padding-right: 436px;
+		}
+	}
+
+	&__images{
+		margin-top: 41px;
+		min-height: calc(100vh - 150px);
+		img{
+			position: absolute;
+		}
+		.img-1{
+			max-width: 711px;
+			max-height: 511px;
+		}
+		.img-2{
+			max-width: 387px;
+			max-height: 511px;
+			bottom: 0;
+			left: 25%;
+			right: 0;
+			margin: auto;
+		}
+		.img-3{
+			max-width: 231px;
+			max-height: 312px;
+			right: 45px;
+		}
+	}
+
+	&__entry{
+		@include font-rem(480px);
+		line-height: normal;
+		background: linear-gradient(to right, color(bat) 52%, color(cloud) 69%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		margin: 0;
+		font-weight: 300;
+		position: absolute;
+	}
+
+}

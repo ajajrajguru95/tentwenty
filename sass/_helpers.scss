@@ -3,12 +3,12 @@
 
 // Primary/Secondary classes
 
-.text-primary{
-
+.text-positive{
+	color: var(--positive);
 }
 
-.text-secondary{
-
+.text-negative{
+	color: var(--negative);
 }
 
 .color-white{
@@ -17,6 +17,10 @@
 
 .text-white{
 	color: color(cloud);
+}
+
+.secondary-font{
+	font-family: $secondaryFontFamily;
 }
 
 
@@ -121,4 +125,26 @@
 
 .position-relative{
 	position: relative;
+}
+
+
+.mt-0{
+	margin-top: 0 !important;
+}
+
+.mb-0{
+	margin-bottom: 0 !important;
+}
+
+.mx-0{
+	margin-inline: 0 !important;
+}
+
+.my-0{
+	margin-block: 0 !important;	
+}
+
+.img-responsive{
+	max-width: 100%;
+	height: auto;
 }

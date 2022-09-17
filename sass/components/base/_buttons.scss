@@ -12,4 +12,8 @@
 	@include font-rem(15px,24px);
 	color: var(--positive);
 	border: 1px solid;
+	@include bp(hover){
+		background-color: var(--negative);
+		color: var(--positive);
+	}
 }

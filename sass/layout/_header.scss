@@ -7,12 +7,14 @@
 	left: 0;
 	width: 100%;
 	padding-top: 40px;
+	z-index: 1;
 }
 
 
 
 // Header Logo and nav styling
-.tt-header{
+
+%header_nav_styles{
 	ul{
 		padding: 0;
 		margin: 0;
@@ -35,6 +37,10 @@
 			}
 		}
 	}
+}
+
+.tt-header{
+	@extend %header_nav_styles;
 	&__nav{
 		padding-left: 80px;
 		@include bp(desktop-lg){		
@@ -46,14 +52,18 @@
 // Search bar and CTA
 .tt-header{
 	&__search{
+		margin-left: 34px;
 		.searchbutton{
 			display: inline-flex;
 			width: 33px;
-			aspect-ratio: 1 / 1;
+			aspect-ratio: 1 / 1; // This way we don't need to change heigth always.
 			align-items: center;
 			justify-content: center;
 			border-radius: 50%;
 			border: 1px solid var(--positive);
 		}
+	}
+	&__btn{
+		margin-left: 23px;
 	}
 }

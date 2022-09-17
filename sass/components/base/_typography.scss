@@ -52,7 +52,7 @@ h4, .h4,
 h5, .h5,
 h6, .h6 {
   font-style: normal;
-  @extend .font-weight-bold;
+  font-weight: normal;
 }
 
 h1, .h1 {
@@ -63,38 +63,38 @@ h1, .h1 {
 }
 
 h2, .h2 {
-    @include font-rem(32px,41px);
+    @include font-rem(40px,48px);
     @include bp(tablet-sm){
       @include font-rem(16px,23px);
     }
 }
 
 h3, .h3 {
-   @include font-rem(15px,98px);
+   @include font-rem(30px,38px);
    @include bp(tablet-sm){
       @include font-rem(12px,98px);
    }
 }
 
 h4, .h4 {
-   @include font-rem(13px,98px);
+   @include font-rem(20px,38px);
    @include bp(tablet-sm){
       @include font-rem(11px,98px);
    }
 }
 
 h5, .h5 {
-   @include font-rem(11px,98px);
-   @include bp(tablet-sm){
-      @include font-rem(10px,98px);
-   }
+   // @include font-rem(11px,98px);
+   // @include bp(tablet-sm){
+   //    @include font-rem(10px,98px);
+   // }
 }
 
 h6, .h6 {
-    @include font-rem(9px,98px);
-    @include bp(tablet-sm){
-      @include font-rem(8px,98px);
-    }
+    // @include font-rem(9px,98px);
+    // @include bp(tablet-sm){
+    //   @include font-rem(8px,98px);
+    // }
 }
 
 h1,h2,h3,h4,h5,h6,p,a,span,li{

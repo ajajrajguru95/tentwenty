@@ -1,8 +1,13 @@
 
 // CSS variables for dynamic change
 :root{
+	// Customizable Theme colors
   --positive: #{color(cloud)};
   --negative: #{color(bat)};
+  --primaryCat : #{color(category,primary)};
+  --secondaryCat : #{color(category,secondary)};
+
+  // Base
   --transitionSpeed : 0.35s;
   --transitionType : ease;
 }
