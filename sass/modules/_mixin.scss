@@ -1,0 +1,252 @@
+// ==========================================================================
+//  GLOBAL Mixins
+// ==========================================================================
+
+
+
+ // * Convert font-size from px to rem
+ // *
+ // * @param $size - the value in pixel you want to convert
+ // *
+ // * e.g. p {@include fontSize(12px);}
+ // * 
+
+
+@mixin font-rem($font-size, $line-height: 0) {
+  font-size: ($font-size / $baseFontSize) * 1rem;
+  @if ($line-height > 0) {
+    line-height: ($line-height / $baseFontSize) * 1rem;
+  }
+}
+
+
+// Letter spacing- tracking
+@mixin letter-spacing($letter-tracking){
+  letter-spacing: ($letter-tracking/1000 * 1em);
+}
+
+ // * SASS color map function
+ // *
+ // * using the function to get an non-map color
+ // *
+ // * e.g. body {background-color: color(background)};
+ // * 
+ // * using the function to get a nested map color
+ // *
+ // * h1{color: color(primary, base);}
+ // *
+ 
+// retrieve color from $colors map ie. `color(base, primary)`
+
+@function color($color-name, $color-variant:null) {
+  // color variant is optional
+  @if ($color-variant != null) {
+    // map inception
+    @return map-get(map-get($colors, $color-name), $color-variant);
+  } @else {
+    @return map-get($colors, $color-name);
+  }
+}
+
+// Media query mixin
+@mixin bp($query) {
+  @if $query == desktop-lg {
+    @media (min-width: 1600px) { @content; }
+  }
+  @if $query == desktop-mid {
+    @media (min-width: 1500px) { @content; }
+  }
+  @else if $query == mid-screen {
+    @media (min-width: 1024px) and (max-width: 1600px) { @content; }
+  }
+  @else if $query == desktop-md {//not used
+    @media (min-width: 1200px) { @content; }
+  }
+  @else if $query == desktop-md-table {
+    @media (min-width: 1300px) { @content; }
+  }
+  @else if $query == desktop-xl {//not used
+    @media (min-width: 1471px) { @content; }
+  }
+  @else if $query == custom-screen {//not used
+    @media (min-width: 1366px) and (max-width: 1899px) { @content; }
+  }
+  @else if $query == desktop-custom {//not used
+     @media (min-width: 1024px) and (max-width: 1200px) { @content; }
+  }
+  @else if $query == desktop-xl-mid {
+     @media (min-width: 1201px) and (max-width: 1470px) { @content; }
+  }
+  @else if $query == custom-mid-size {
+     @media (min-width: 1024px) and (max-width: 1599px) { @content; }
+  }
+  @else if $query == mini-cart-query {
+     @media (min-width: 992px) and (max-width: 1365px) { @content; }
+  }
+  @else if $query == standard-desktop {
+     @media (min-width: 992px) and (max-width: 1280px) { @content; }
+  }
+  @else if $query == standard-desktop-mid {
+     @media (min-width: 992px) and (max-width: 1200px) { @content; }
+  }
+  @else if $query == tablet-md {
+    @media (min-width: 992px) { @content; }
+  }
+  @else if $query == tablet-sm {
+    @media (max-width: 991px) { @content; }
+  }
+  @else if $query == tablet-strict {
+    @media (min-width: 768px) and (max-width: 991px)  { @content; }
+  }
+  @else if $query == tablet-only {//not used
+    @media (min-width: 768px) and (max-width: 768px)  { @content; }
+  }
+  @else if $query == tablet {
+    @media (min-width: 768px) { @content; }
+  }
+  @else if $query == mobile {
+    @media (max-width: 767px)  { @content; }
+  }
+  @else if $query == responsive { // this is only for header. please do not use anywhere else
+    @media (max-width: 1024px)  { @content; }
+  }
+  @else if $query == desktop-head { // this is only for header. please do not use anywhere else
+    @media (min-width: 1025px)  { @content; }
+  }
+  @else if $query == mid-head { // this is only for header. please do not use anywhere else
+    @media (min-width: 1025px) and (max-width: 1199px)  { @content; }
+  }
+  @else if $query == xs {
+    @media (max-width: 320px)  { @content; }
+  }
+  @else if $query == tablet-between {
+    @media (min-width: 992px) and (max-width: 1199px)  { @content; }
+  } 
+}
+
+
+
+// Input placeholder mixin
+
+@mixin input-placeholder {
+    &.placeholder { @content; }
+    &:-moz-placeholder { @content; }
+    &::-moz-placeholder { @content; }
+    &:-ms-input-placeholder { @content; }
+    &::-webkit-input-placeholder { @content; }
+}
+
+// input,  
+// textarea {  
+//     @include input-placeholder {
+//         color: $grey;
+//     }
+// }
+
+
+// @mixin on-hover {
+//     @media (hover: hover) and (pointer: fine) {
+//         &:hover {
+//             @content;
+//         }
+//     }
+// }
+
+// IE Mixins
+
+@mixin ie-11 {
+  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    @content;
+  }
+}
+
+@mixin ie-edge {
+  @supports (-ms-ime-align: auto) {
+    @content;
+  }
+}
+
+@mixin moz {
+  @-moz-document url-prefix() {
+    @content;
+  }
+}
+
+
+// Gradient mixin
+
+@mixin custom-gradient($degree,$image:null) {
+  background-image: $image,linear-gradient($degree, color(secondary,base) 0%, color(secondary,dark) 100%);
+}
+
+// Margin rem mixin
+//usage 
+// .header{
+//   @include margin(10px 15px 10px 12px);
+//   @include margin-top(10px)
+// }
+
+// @mixin margin($margin) {
+//   @if length($margin) == 1 {
+//       margin: ($margin / $baseFontSize) * 1rem;
+//   }
+//   @if length($margin) == 2 {
+//       margin: (nth($margin, 1) / $baseFontSize) * 1rem (nth($margin, 2) / $baseFontSize) * 1rem;
+//   }
+//   @if length($margin) == 3 {
+//       margin: (nth($margin, 1) / $baseFontSize) * 1rem (nth($margin, 2) / $baseFontSize) * 1rem (nth($margin, 3) / $baseFontSize) * 1rem;
+//   }
+//   @if length($margin) == 4 {
+//       margin: (nth($margin, 1) / $baseFontSize) * 1rem (nth($margin, 2) / $baseFontSize) * 1rem (nth($margin, 3) / $baseFontSize) * 1rem (nth($margin, 4) / $baseFontSize) * 1rem;
+//   }
+// }
+
+// @mixin margin-top($margin) {
+//     margin-top: ($margin / $baseFontSize) * 1rem;
+// }
+
+// @mixin margin-right($margin) {
+//     margin-right: ($margin / $baseFontSize) * 1rem;
+// }
+
+// @mixin margin-bottom($margin) {
+//     margin-bottom: ($margin / $baseFontSize) * 1rem;
+// }
+
+// @mixin margin-left($margin) {
+//     margin-left: ($margin / $baseFontSize) * 1rem;
+// }
+
+
+// // Padding rem mixin
+
+// @mixin padding($padding) {
+//   @if length($padding) == 1 {
+//       padding: ($padding / $baseFontSize) * 1rem;
+//   }
+//   @if length($padding) == 2 {
+//       padding: (nth($padding, 1) / $baseFontSize) * 1rem (nth($padding, 2) / $baseFontSize) * 1rem;
+//   }
+//   @if length($padding) == 3 {
+//       padding: (nth($padding, 1) / $baseFontSize) * 1rem (nth($padding, 2) / $baseFontSize) * 1rem (nth($padding, 3) / $baseFontSize) * 1rem;
+//   }
+//   @if length($padding) == 4 {
+//       padding: (nth($padding, 1) / $baseFontSize) * 1rem (nth($padding, 2) / $baseFontSize) * 1rem (nth($padding, 3) / $baseFontSize) * 1rem (nth($padding, 4) / $baseFontSize) * 1rem;
+//   }
+// }
+
+// @mixin padding-top($padding) {
+//     padding-top: ($padding / $baseFontSize) * 1rem;
+// }
+
+// @mixin padding-right($padding) {
+//     padding-right: ($padding / $baseFontSize) * 1rem;
+// }
+
+// @mixin padding-bottom($padding) {
+//     padding-bottom: ($padding / $baseFontSize) * 1rem;
+// }
+
+// @mixin padding-left($padding) {
+//     padding-left: ($padding / $baseFontSize) * 1rem;
+// }

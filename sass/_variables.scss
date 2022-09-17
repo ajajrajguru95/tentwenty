@@ -1,0 +1,96 @@
+
+/* ==========================================================================
+  COMMON VARIABLES
+  ========================================================================== */
+
+// Root sizing control as per feedback
+
+// Color variable map
+$colors: (
+  // non-nested values
+  body_bg: #FFFFFF,
+  section_bg: #F8F8F8,
+  border: #DFF1F8,
+  failure: #eb7267,
+  error: #E3000B,
+  success: #2AB740,
+  white: #fff,
+  black: #000,
+  disabled: #EBEBEB,
+  grey : #E0E0E0,  
+  greylight: #F4F4F4,
+  greydark: #9FA8B2,
+  greydarker: #75808C,
+  badge: #F09402,
+  statusStop : #C40303,
+  category : #C3E5D2,
+  // nested map inception
+  text: #121E4D,
+  primary: (
+   base: #121E4D,
+   dark : #273c84,
+   darker: #071033,
+   light: #1C2D65,
+   lighter: #2C3A6F,
+  ),
+  secondary: (
+    base: #11998E,
+    light: #00C181,
+    lighter: #DBEDE3,
+    dark: #38ef7d,
+    darker: #25C685,
+    hover: #D0EADC,
+  )
+);
+
+// Usage
+// .header{
+//   color: color(primary,base); //Nested
+//   color: color(footer);//Direct
+// }
+
+// SPACING
+$mobileSpacing : 24px;
+
+
+// TYPOGRAPHY
+//   ==========================================================================
+// $htmlFontSize: 16px;
+$htmlFontSize : var(--htmlFontSize); //For phase2 to have smaller sizes as per feedback
+$baseFontSize: 16px;
+$baseFontFamily: 'forma-djr-micro', sans-serif;
+$secondaryFontFamily: 'ff-cocon-pro', sans-serif;
+$tertiaryFontFamily: 'aktiv-grotesk', sans-serif;
+$font-awesome: 'FontAwesome';
+$baseLineHeight: 1.5;
+$baseTextColor: color(text);
+
+
+// ==========================================================================
+//  MIN HEIGHT FOR CONTAINER
+//  ==========================================================================
+$min-height-wrapper-desktop: 58vh;
+$min-height-wrapper-mobile: 63vh;
+
+
+// ==========================================================================
+//  BOOTSTRAP SELECT
+//  ==========================================================================
+
+$color-red-error: rgb(185, 74, 72) !default;
+$color-green-success: #28a745;
+$color-grey-arrow: rgba(204, 204, 204, 0.2) !default;
+
+$width-default: 220px !default; // 3 960px-grid columns
+
+$zindex-select-dropdown: 1060 !default; // must be higher than a modal background (1050)
+
+//** Placeholder text color
+$input-color-placeholder: #999 !default;
+$input-alt-color-placeholder: rgba(255, 255, 255, 0.5) !default;
+
+$input-padding-y-sm: .25rem !default;
+$input-padding-x-sm: .5rem !default;
+
+$input-padding-y-lg: 0.5rem !default;
+$input-padding-x-lg: 1rem !default;

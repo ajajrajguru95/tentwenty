@@ -1,0 +1,19 @@
+{
+  "name": "tentwenty",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ajajrajguru95/tentwenty.git"
+  },
+  "author": "AJ",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ajajrajguru95/tentwenty/issues"
+  },
+  "homepage": "https://github.com/ajajrajguru95/tentwenty#readme"
+}
