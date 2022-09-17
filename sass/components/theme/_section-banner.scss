@@ -13,6 +13,12 @@
 		width: 100%;
 		height: 343px;
 		background: linear-gradient(180deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 114.38%);
+		@include bp(tablet-sm){
+			top: inherit;
+			bottom: 0;
+			background: linear-gradient(180deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 114.38%);	
+			rotate: -180deg;
+		}
 	}
 	&__content{
 		position: absolute;
@@ -20,6 +26,12 @@
 		@include bp(tablet-md){
 			max-width: 493px;	
 		}
+		@include bp(tablet-sm){
+			bottom: 51px;
+			width: calc(100% - 84px);
+			left: 0;
+			padding-inline: 42px;
+		}	
 	}
 	&__caption{
 		margin-bottom: 20px;

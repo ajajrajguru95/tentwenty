@@ -1,0 +1,138 @@
+
+// Stories section
+
+.stories{
+	color: var(--positive);
+	background-image: url('../img/threads.svg');
+	background-repeat: no-repeat;
+	background-size: 1145px;
+	background-position: 0 103px;
+	@include bp(tablet-sm){
+		background-size: 720px;
+		background-position: -360px 242px;
+		overflow-x: hidden;
+	}
+	.container{
+		@include bp(tablet-sm){
+			padding: 0;	
+		}
+	}
+	&__content{
+		text-align: center;
+		margin-bottom: 52px;
+		@include bp(tablet-md){
+			padding-top: 173px;
+			margin-inline: auto;
+			max-width: 402px;
+		}
+		@include bp(tablet-sm){
+			padding-top: 70px;
+			margin-bottom: 32px;	
+		}
+	}
+
+	&__heading{
+		margin:0;
+		@include bp(tablet-sm){
+			@include font-rem(28px,38px);
+		}
+	}
+
+	&__nav{
+		position: relative;
+		z-index: 1;
+		@extend %header_nav_styles; //From header
+		ul.nav li {
+			@include bp(tablet-sm){
+				&:not(:last-child){
+					margin-left: 10px;
+				}
+			}
+			a{
+				@include font-rem(16px);
+				@include bp(tablet-sm){
+					@include font-rem(14px);
+				}
+			}
+		}
+	}
+
+	&__cover{
+		text-align: center;
+		padding-bottom: 117px;
+		isolation: isolate; //Creates stacking context
+		@include bp(tablet-sm){
+			margin-top: 58px;	
+			position: relative;
+		}
+		img{
+			max-width: 408px;
+			max-height: 487px;
+			rotate: 8deg;
+			margin-bottom: 32px;
+			@include bp(tablet-sm){
+				max-width: 287px;
+				max-height: 343px;
+				rotate: 7deg;;
+			}
+		}
+		.cover-wrapper{
+			@include bp(tablet-sm){
+				position: static;
+			}
+		}
+		.cover-text{
+			text-align: center;
+			margin-top: 32px;
+		}
+		.heading-wrapper{
+			position: absolute;
+			width: 100%;
+			top: 35%;
+			left: 0;
+			display: flex;
+			flex-direction: column;
+			z-index: -1;
+			@include bp(tablet-sm){
+				white-space: nowrap;
+				top: 55%;
+			}
+			span{
+				display: inline-block;
+				@include font-rem(160px,168px);
+				@include bp(tablet-sm){
+					@include font-rem(100px,82px);
+				}
+			}
+			.text-1{
+				text-align: right;
+				@include bp(desktop-lg){
+					padding-right: 13%;
+				}
+			}
+			.text-2{
+				text-align: left;
+			}
+		}
+		.enquiry-badge{
+			position: absolute;
+			top: calc(50% - 60px);
+			left: -165px;
+			width: 121px;
+			aspect-ratio: 1 / 1;
+			background: #CB9F77;
+			@include font-rem(16px,22px);
+			border-radius: 50%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			@include bp(tablet-sm){
+				top: 180px;
+				right: -35px;
+				left: inherit;	
+			}
+		}
+	}
+
+
+}

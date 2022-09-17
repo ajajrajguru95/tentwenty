@@ -119,13 +119,25 @@
 	justify-content: center;
 }
 
+.flex-column{
+	flex-direction: column;
+}
+
 .container{
 	padding-inline: 83px 64px;
+	@include bp(tablet-sm){
+		padding-inline: 48px 35px;
+	}
 }
 
 .position-relative{
 	position: relative;
 }
+
+.d-none{
+	display: none !important;
+}
+
 
 
 .mt-0{

@@ -1,9 +1,19 @@
 
 // Section 3 - Fixed image
 .fixed-image{
-	width: 727px;
+	width: 100%;
+	@include bp(tablet-md){
+		width: 727px;
+	}
+	@include bp(tablet-sm){
+		min-height: auto;
+		height: 605px;
+	}	
 	.img-1{
 		width: 100%;
 		height: 100vh;
+		@include bp(tablet-sm){
+			height: 100%;	
+		}
 	}
 }

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<title>TenTwenty - Frontend assignment</title>
 	<!-- Fonts Link -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -32,37 +32,39 @@
 							</svg>
 						</a>
 					</div><!-- Logo ends -->
-					<!-- Primary Nav -->
-					<nav class="tt-header__nav primary-nav flex-1">
-						<ul class="d-flex align-items-center" aria-label="Primary" role="list">
-							<li><a href="#">Private clients</a></li>
-							<li><a href="#">Corporates</a></li>
-							<li><a href="#">Insights</a></li>
-							<li><a href="#">Contact</a></li>
-						</ul>
-					</nav><!-- Nav ends -->
-					<!-- Secondary Nav with CTA and Search -->
-					<div class="tt-header__cta d-flex align-items-center">
-						<!-- Secondary Nav -->
-						<ul class="d-flex align-items-center secondary-nav" aria-label="Secondary" role="list">
-							<li><a href="#">About</a></li>
-							<li><a href="#">Careers</a></li>
-						</ul>
-						<!-- Search Form -->
-						<form action="/search" method="get" class="tt-header__search">
-						    <!-- <input class="search expandright" id="searchright" type="search" name="q" placeholder="Search"> -->
-						    <label class="button searchbutton cursor-pointer" for="searchright">
-						    	<span class="mglass d-flex">
-						    		<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<path fill-rule="evenodd" clip-rule="evenodd" d="M14.2267 13.0943L10.3462 9.21388C11.0329 8.30459 11.4402 7.17242 11.4402 5.94515C11.4402 2.94677 9.00948 0.516113 6.01109 0.516113C3.01271 0.516113 0.582031 2.94677 0.582031 5.94515C0.582031 8.94352 3.01271 11.3742 6.01109 11.3742C7.23838 11.3742 8.37055 10.9669 9.27985 10.2802L13.1603 14.1607L14.2267 13.0943ZM9.93182 5.94538C9.93182 8.11087 8.17633 9.86635 6.01083 9.86635C3.84533 9.86635 2.08984 8.11087 2.08984 5.94538C2.08984 3.77989 3.84533 2.02441 6.01083 2.02441C8.17633 2.02441 9.93182 3.77989 9.93182 5.94538Z" fill="white"/>
-									</svg>
-								</span>
-							</label>
-						 </form>
-						 <!-- Meeting Btn -->
-						 <a href="#" class="tt-header__btn tt-btn" role="button">Book A meeting</a>
+					<div class="mobile-nav-wrapper d-none">
+						<!-- Primary Nav -->
+						<nav class="tt-header__nav primary-nav flex-1">
+							<ul class="d-flex align-items-center" aria-label="Primary" role="list">
+								<li><a href="#">Private clients</a></li>
+								<li><a href="#">Corporates</a></li>
+								<li><a href="#">Insights</a></li>
+								<li><a href="#">Contact</a></li>
+							</ul>
+						</nav><!-- Nav ends -->
+						<!-- Secondary Nav with CTA and Search -->
+						<div class="tt-header__cta d-flex align-items-center">
+							<!-- Secondary Nav -->
+							<ul class="d-flex align-items-center secondary-nav" aria-label="Secondary" role="list">
+								<li><a href="#">About</a></li>
+								<li><a href="#">Careers</a></li>
+							</ul>
+							<!-- Search Form -->
+							<form action="/search" method="get" class="tt-header__search">
+							    <!-- <input class="search expandright" id="searchright" type="search" name="q" placeholder="Search"> -->
+							    <label class="button searchbutton cursor-pointer" for="searchright">
+							    	<span class="mglass d-flex">
+							    		<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M14.2267 13.0943L10.3462 9.21388C11.0329 8.30459 11.4402 7.17242 11.4402 5.94515C11.4402 2.94677 9.00948 0.516113 6.01109 0.516113C3.01271 0.516113 0.582031 2.94677 0.582031 5.94515C0.582031 8.94352 3.01271 11.3742 6.01109 11.3742C7.23838 11.3742 8.37055 10.9669 9.27985 10.2802L13.1603 14.1607L14.2267 13.0943ZM9.93182 5.94538C9.93182 8.11087 8.17633 9.86635 6.01083 9.86635C3.84533 9.86635 2.08984 8.11087 2.08984 5.94538C2.08984 3.77989 3.84533 2.02441 6.01083 2.02441C8.17633 2.02441 9.93182 3.77989 9.93182 5.94538Z" fill="white"/>
+										</svg>
+									</span>
+								</label>
+							 </form>
+							 <!-- Meeting Btn -->
+							 <a href="#" class="tt-header__btn tt-btn" role="button">Book A meeting</a>
 
-					</div><!-- Secondar nav/CTA ends -->
+						</div><!-- Secondar nav/CTA ends -->
+					</div>
 				</div><!-- Wrapper ends -->
 			</div><!-- Container ends -->
 		</header><!-- Header ends -->
@@ -107,13 +109,36 @@
 
 
 			<!-- Section 4 - Fixed Images-->
-			<section class="tt-main__section stories min-height position-relative">
-				<div class="container">
+			<section class="tt-main__section stories min-height position-relative" style="background-color: var(--secondaryCat)">
+				<div class="container d-flex align-items-center justify-content-center flex-column">
+					<!-- Content -->
 					<div class="stories__content">
 						<h3 class="stories__heading">Success stories our capabilities in action</h3>
 					</div>
+					<!-- Nav -->
+					<div class="stories__nav">
+						<ul class="d-flex align-items-center nav" aria-label="Stories Navigation" role="list">
+							<li><a href="#">Private clients</a></li>
+							<li><a href="#">Corporates</a></li>
+							<li><a href="#">Insights</a></li>
+							<li><a href="#">Contact</a></li>
+						</ul>
+					</div>
+					<!-- Cover and badge -->
+					<div class="stories__cover">
+						<img src="img/stories-img.jpg" alt="Stories Image" class="img-responsive">
+						<div class="heading-wrapper secondary-font">
+							<span class="text-1">Diversifying for</span>
+							<span class="text-2">a more secure future</span>
+						</div>
+						<div class="cover-wrapper position-relative">
+							<h3 class="cover-text mb-0">Diversifying for a more secure future</h3>
+							<span class="enquiry-badge">Make Enquiry</span>
+						</div>
+					</div>
+
 				</div>
-			</section><!-- Slide 3 ends -->
+			</section><!-- Slide 4 ends -->
 
 
 

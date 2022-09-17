@@ -8,6 +8,9 @@
 	width: 100%;
 	padding-top: 40px;
 	z-index: 1;
+	@include bp(tablet-sm){
+		padding-top: 30px;	
+	}
 }
 
 
@@ -22,11 +25,17 @@
 	    li{
 	    	&:not(:first-child){
 	    		margin-left: 30px; //Spacing is asymmetric in design so follow a common one.
+	    		@include bp(standard-desktop){
+	    			margin-left: 10px;
+	    		}
 	    	}
 	    }
 		a{
 			@include font-rem(15px,19px);
 			color: var(--positive);
+			@include bp(standard-desktop){
+    			@include font-rem(14px);
+    		}
 			@include bp(hover){
 				color: var(--negative);
 			}
@@ -45,6 +54,9 @@
 		padding-left: 80px;
 		@include bp(desktop-lg){		
 			padding-left: 161px;
+		}
+		@include bp(standard-desktop){
+			padding-left: 50px;
 		}
 	}
 }
@@ -66,4 +78,9 @@
 	&__btn{
 		margin-left: 23px;
 	}
+}
+
+// Mobile nav
+.tt-header{
+
 }

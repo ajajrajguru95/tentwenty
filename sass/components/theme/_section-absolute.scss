@@ -2,6 +2,10 @@
 // Section 2 - The floating images
 .section-absolute{
 	padding-top: 149px;
+	@include bp(tablet-sm){
+		padding-top: 68px;
+		display: none;	
+	}
 
 	&__content{
 		margin-left: auto;
