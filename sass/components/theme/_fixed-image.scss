@@ -2,6 +2,14 @@
 // Section 3 - Fixed image
 .fixed-image{
 	width: 100%;
+	background-image: url('../img/fixed-img.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    &:before{
+    	content: '';
+    }
 	@include bp(tablet-md){
 		flex: 1 0 727px;
 		position: relative;
@@ -10,12 +18,5 @@
 	@include bp(tablet-sm){
 		min-height: auto;
 		height: 605px;
-	}	
-	.img-1{
-		width: 100%;
-		height: 100vh;
-		@include bp(tablet-sm){
-			height: 100%;	
-		}
 	}
 }

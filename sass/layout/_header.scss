@@ -52,6 +52,13 @@
 
 .tt-header{
 	@extend %header_nav_styles;
+	&__logo{
+		svg{
+			path{
+				fill: var(--positive);
+			}
+		}
+	}
 	&__nav{
 		@include bp(tablet-md){
 			padding-left: 80px;
@@ -75,8 +82,33 @@
 .tt-header{
 	&__search{
 		margin-left: 34px;
+		position: relative;
 		@include bp(tablet-sm){
 			display: none;	
+		}
+		@include bp(tablet-md){
+			.search{
+				position: absolute;
+				right: 38px;
+				background-color: transparent;
+				color: var(--positive);
+				border: 1px solid;
+				outline: none;
+				opacity: 0;
+				padding: 0;
+				width: 0;
+				height: 100%;
+				z-index: 10;
+				transition: all 0.4s ease;
+				padding: 5px 15px;
+				@include input-placeholder{
+					color: var(--positive);
+				}
+				&:focus{
+					width: 280px;
+					opacity: 1;
+				}
+			}
 		}
 		.searchbutton{
 			display: inline-flex;
@@ -86,6 +118,11 @@
 			justify-content: center;
 			border-radius: 50%;
 			border: 1px solid var(--positive);
+		}
+		svg{
+			path{
+				fill: var(--positive);
+			}
 		}
 	}
 	&__btn{
@@ -115,11 +152,10 @@
 				li{
 					width: 100%;
 					text-align: right;
-					&:not(:last-child){
-						margin-bottom: 8px;
-					}
+					margin-bottom: 10px;
 					a{
 						color: color(bat);
+						@include font-rem(18px);
 					}
 				}
 			}
@@ -146,7 +182,7 @@
 			}
 			.mobile-nav-wrapper{
 				translate : 0 0;
-				padding-top: 78px;
+				padding-top: 100px;
 				ul{
 					opacity: 1;
 				}

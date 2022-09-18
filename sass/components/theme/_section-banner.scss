@@ -42,6 +42,9 @@
 			left: 0;
 			padding-inline: 42px;
 		}	
+		@include bp(mobile-mini){
+			width: calc(100% - -23px);
+		}
 	}
 	&__caption{
 		margin-bottom: 20px;

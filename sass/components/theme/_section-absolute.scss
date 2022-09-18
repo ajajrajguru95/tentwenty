@@ -2,6 +2,14 @@
 // Section 2 - The floating images
 .section-absolute{
 	padding-top: 149px;
+	background-color: rgb(233 221 207 / 42%);
+	transition: background-color var(--transitionSpeed) var(--transitionType);
+	&.active{
+		background-color: var(--primaryCat);
+		.section-absolute__entry{
+			animation: textGradient 1.8s linear infinite;
+		}
+	}
 	@include bp(tablet-sm){
 		padding-top: 272px;
 		z-index: 1;
@@ -9,6 +17,7 @@
 
 	&__content{
 		margin-left: auto;
+		color: color(bat);
 		@include bp(tablet-md){
 			max-width: 643px;
 			margin-right: 214px;
@@ -34,6 +43,7 @@
 		min-height: calc(100vh - 150px);
 		@include bp(tablet-sm){
 			position: static;	
+			min-height: calc(100vh - 266px);
 		}
 		@include bp(mobile-mini){
 			min-height: calc(100vh - 306px);
@@ -67,10 +77,10 @@
 				left: inherit;
 				right: 0;
 				top: 40%;
+    			margin: 0;
 			}
 			@include bp(mobile-mini){
 				top: 50%;
-    			margin: 0;
 			}
 		}
 		.img-3{
@@ -112,4 +122,13 @@
 		}
 	}
 
+}
+
+
+
+@keyframes textGradient{
+	to{
+		background-position: 200% center;
+		background-size: 200% auto;
+	}
 }
