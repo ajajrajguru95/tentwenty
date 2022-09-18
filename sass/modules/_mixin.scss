@@ -71,6 +71,9 @@
   @else if $query == mobile {
     @media (max-width: 767px)  { @content; }
   }
+  @else if $query == mobile-mini {
+    @media (max-width: 460px)  { @content; }
+  }
   @else if $query == xs {
     @media (max-width: 320px)  { @content; }
   }

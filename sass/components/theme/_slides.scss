@@ -1,6 +1,9 @@
 
 // Common section/slide code
 .tt-main{
+	@include bp(tablet-sm){
+		overflow-x: hidden;	
+	}
 	&__section{
 		// width: 100vw;
 	}

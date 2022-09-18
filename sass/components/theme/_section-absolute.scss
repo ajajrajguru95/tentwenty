@@ -3,8 +3,8 @@
 .section-absolute{
 	padding-top: 149px;
 	@include bp(tablet-sm){
-		padding-top: 68px;
-		display: none;	
+		padding-top: 272px;
+		z-index: 1;
 	}
 
 	&__content{
@@ -16,30 +16,71 @@
 		@include bp(desktop-lg){
 			padding-right: 436px;
 		}
+		@include bp(tablet-sm){
+			margin-left: -2px;
+			position: relative;
+			z-index: 1;	
+		}
+	}
+
+	&__heading{
+		@include bp(tablet-sm){
+			@include font-rem(30px,48px);
+		}
 	}
 
 	&__images{
 		margin-top: 41px;
 		min-height: calc(100vh - 150px);
+		@include bp(tablet-sm){
+			position: static;	
+		}
+		@include bp(mobile-mini){
+			min-height: calc(100vh - 306px);
+		}
 		img{
 			position: absolute;
 		}
 		.img-1{
-			max-width: 711px;
-			max-height: 511px;
+			width: 711px;
+			height: 511px;
+			@include bp(tablet-sm){
+				width: 304px;
+				height: 218px;	
+				top: 86px;
+				left: -32px;
+			}
 		}
 		.img-2{
-			max-width: 387px;
-			max-height: 511px;
+			width: 387px;
+			height: 511px;
 			bottom: 0;
 			left: 25%;
 			right: 0;
 			margin: auto;
+			@include bp(tablet-sm){
+				width: 324px;
+				height: 428px;	
+				left: inherit;
+				right: 0;
+				top: 40%;
+			}
+			@include bp(mobile-mini){
+				top: 50%;
+    			margin: 0;
+			}
 		}
 		.img-3{
-			max-width: 231px;
-			max-height: 312px;
+			width: 231px;
+			height: 312px;
 			right: 45px;
+			@include bp(tablet-sm){
+				width: 165px;
+				height: 223px;	
+				right: inherit;
+				bottom: -49px;
+				left: 50px;
+			}
 		}
 	}
 
@@ -52,6 +93,13 @@
 		margin: 0;
 		font-weight: 300;
 		position: absolute;
+		@include bp(tablet-sm){
+		    white-space: nowrap;
+		    left: -103px;
+		    @include font-rem(120px,98px);
+		    background: linear-gradient(to right, rgba(0,0,0,0.29) 80%, #e9ddcf 10%);
+		    -webkit-background-clip: text;
+		}
 	}
 
 }

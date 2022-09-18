@@ -63,7 +63,10 @@
 		isolation: isolate; //Creates stacking context
 		@include bp(tablet-sm){
 			margin-top: 58px;	
-			position: relative;
+			padding-bottom: 77px;
+		}
+		@include bp(mobile){
+			padding-inline: 10px;
 		}
 		img{
 			max-width: 408px;
@@ -73,7 +76,8 @@
 			@include bp(tablet-sm){
 				max-width: 287px;
 				max-height: 343px;
-				rotate: 7deg;;
+				rotate: 7deg;
+				margin-bottom: 206px;
 			}
 		}
 		.cover-wrapper{
@@ -84,6 +88,11 @@
 		.cover-text{
 			text-align: center;
 			margin-top: 32px;
+			@include bp(tablet-sm){
+				margin-top: 0;
+				line-height: normal;	
+				@include font-rem(20px,38px);
+			}
 		}
 		.heading-wrapper{
 			position: absolute;
@@ -95,7 +104,7 @@
 			z-index: -1;
 			@include bp(tablet-sm){
 				white-space: nowrap;
-				top: 55%;
+				top: 59%;
 			}
 			span{
 				display: inline-block;
@@ -127,8 +136,8 @@
 			align-items: center;
 			justify-content: center;
 			@include bp(tablet-sm){
-				top: 180px;
-				right: -35px;
+				top: 48%;
+				right: 0;
 				left: inherit;	
 			}
 		}

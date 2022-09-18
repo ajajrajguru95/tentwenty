@@ -7,6 +7,9 @@
    Base Type
    ========================================================================== */
 *{
+    margin: 0;
+    padding: 0;
+    font: inherit;
     &::-moz-focus-inner {
       border: 0;
     }
@@ -16,6 +19,14 @@
       }
       outline: 0;
     }
+}
+
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 html {
