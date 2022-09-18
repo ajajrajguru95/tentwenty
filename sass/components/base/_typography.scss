@@ -29,6 +29,14 @@
   box-sizing: border-box;
 }
 
+input,
+textarea,
+button,
+select,
+a,div {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
 html {
   // @include font-rem($htmlFontSize);
   font-size: var(--htmlFontSize); 

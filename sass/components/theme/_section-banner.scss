@@ -5,12 +5,14 @@
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
-	&:before{
+	&:before,&:after{
 		content: '';
 		position: absolute;
 		top: 0;
 		left: 0;
-		width: 100%;
+		width: 100%;	
+	}
+	&:before{
 		height: 343px;
 		background: linear-gradient(180deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 114.38%);
 		@include bp(tablet-sm){
@@ -18,6 +20,14 @@
 			bottom: 0;
 			background: linear-gradient(180deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 114.38%);	
 			rotate: -180deg;
+		}
+	}
+	&:after{
+		height: 100%;
+		background: rgba(color(bat), 0.16);
+		@include bp(tablet-sm){
+			height: 139px;
+			background: linear-gradient(180deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 100%);	
 		}
 	}
 	&__content{

@@ -160,3 +160,15 @@
 	max-width: 100%;
 	height: auto;
 }
+
+.desktop-hide{
+	@include bp(tablet-md){
+		display: none !important;
+	}
+}
+
+.mobile-hide{
+	@include bp(tablet-sm){
+		display: none !important;
+	}
+}
