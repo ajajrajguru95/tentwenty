@@ -4,6 +4,8 @@
 	width: 100%;
 	@include bp(tablet-md){
 		flex: 1 0 727px;
+		position: relative;
+		z-index: -1;
 	}
 	@include bp(tablet-sm){
 		min-height: auto;

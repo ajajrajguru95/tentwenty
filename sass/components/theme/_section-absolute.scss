@@ -90,12 +90,19 @@
 	&__entry{
 		@include font-rem(480px);
 		line-height: normal;
-		background: linear-gradient(to right, color(bat) 52%, color(cloud) 69%);
+		background: linear-gradient(to right, color(bat) 70%, color(cloud) 70%);
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
 		margin: 0;
 		font-weight: 300;
 		position: absolute;
+		@include bp(tablet-md){
+			white-space: nowrap;
+			top: -120px;
+		}
+		@include bp(desktop-lg){
+			left: 1em;
+		}
 		@include bp(tablet-sm){
 		    white-space: nowrap;
 		    left: -103px;
