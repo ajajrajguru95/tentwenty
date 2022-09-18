@@ -11,10 +11,6 @@
 	color: var(--negative);
 }
 
-.color-white{
-	color: color(cloud);
-}
-
 .text-white{
 	color: color(cloud);
 }
@@ -130,6 +126,8 @@
 	}
 }
 
+// General utilities
+
 .position-relative{
 	position: relative;
 }
@@ -137,8 +135,6 @@
 .d-none{
 	display: none !important;
 }
-
-
 
 .mt-0{
 	margin-top: 0 !important;
