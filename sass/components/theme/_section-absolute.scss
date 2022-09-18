@@ -11,10 +11,10 @@
 		margin-left: auto;
 		@include bp(tablet-md){
 			max-width: 643px;
-			padding-right: 214px;
+			margin-right: 214px;
 		}
 		@include bp(desktop-lg){
-			padding-right: 436px;
+			margin-right: 436px;
 		}
 		@include bp(tablet-sm){
 			margin-left: -2px;
@@ -44,6 +44,9 @@
 		.img-1{
 			width: 711px;
 			height: 511px;
+			@include bp(tablet-md){
+				left: -90px;	
+			}
 			@include bp(tablet-sm){
 				width: 304px;
 				height: 218px;	

@@ -9,8 +9,10 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<!-- Poppins and Comorant-->
 	<link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@400;600&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+	<!-- Main styles -->
 	<link rel="stylesheet" href="css/app.css">
-
+	<!-- Scrollbar styles -->
+	<link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
 </head>
 <body>
 	<!-- tt denotes tentwenty here :) -->
@@ -77,82 +79,82 @@
 				</div><!-- Wrapper ends -->
 			</div><!-- Container ends -->
 		</header><!-- Header ends -->
+			
+		<main class="slides-wrapper"> <!-- To init the scrollbar -->
+			<div class="tt-main">
 
-		<main class="tt-main">
-
-			<!-- Section 1 - The main page Slide 1-->
-			<section class="tt-main__section section-banner min-height position-relative" data-color="">
-				<div class="container">
-					<div class="section-banner__content text-positive">
-						<h4 class="section-banner__caption secondary-font font-weight-semi-bold">
-							If not now, then when? 
-						</h4>
-						<h1 class="section-banner__heading my-0 font-weight-light">
-							Time to make your wealth work for you
-						</h1>
-					</div>
-				</div>
-			</section><!-- Slide 1 ends -->
-
-			<!-- Section 2 - The floating Images-->
-			<section class="tt-main__section section-absolute min-height position-relative" style="background-color: var(--primaryCat);">
-				<div class="container">
-					<div class="section-absolute__content text-negative">
-						<h2 class="section-absolute__heading my-0">
-							Building a lasting legacy for individuals, families and businesses globally
-						</h2>
-					</div>
-				</div>
-				<div class="section-absolute__images position-relative">
-					<h2 class="section-absolute__entry">business</h2>
-					<img src="img/section-img-1.jpg" alt="section image 1" class="img-responsive img-1 object-cover" />
-					<img src="img/section-img-2.jpg" alt="section image 2" class="img-responsive img-2 object-cover" />
-					<img src="img/section-img-3.jpg" alt="section image 3" class="img-responsive img-3 object-cover" />
-				</div>
-			</section><!-- Slide 2 ends -->
-
-			<!-- Section 3 - Fixed Images-->
-			<section class="tt-main__section fixed-image min-height position-relative">
-				<img src="img/fixed-img.jpg" alt="section image 1" class="img-responsive img-1 object-cover" />
-			</section><!-- Slide 3 ends -->
-
-
-			<!-- Section 4 - Fixed Images-->
-			<section class="tt-main__section stories min-height position-relative" style="background-color: var(--secondaryCat)">
-				<div class="container d-flex align-items-center justify-content-center flex-column">
-					<!-- Content -->
-					<div class="stories__content">
-						<h3 class="stories__heading">Success stories our capabilities in action</h3>
-					</div>
-					<!-- Nav -->
-					<div class="stories__nav">
-						<ul class="d-flex align-items-center nav" aria-label="Stories Navigation" role="list">
-							<li><a href="#">Private clients</a></li>
-							<li><a href="#">Corporates</a></li>
-							<li><a href="#">Insights</a></li>
-							<li><a href="#">Contact</a></li>
-						</ul>
-					</div>
-					<!-- Cover and badge -->
-					<div class="stories__cover">
-						<img src="img/stories-img.jpg" alt="Stories Image" class="img-responsive">
-						<div class="heading-wrapper secondary-font">
-							<span class="text-1">Diversifying for</span>
-							<span class="text-2">a more secure future</span>
-						</div>
-						<div class="cover-wrapper position-relative">
-							<h3 class="cover-text mb-0">Diversifying for a more secure future</h3>
-							<span class="enquiry-badge">Make Enquiry</span>
+				<!-- Section 1 - The main page Slide 1-->
+				<section class="tt-main__section section-banner min-height position-relative" data-color="">
+					<div class="container">
+						<div class="section-banner__content text-positive">
+							<h4 class="section-banner__caption secondary-font font-weight-semi-bold">
+								If not now, then when? 
+							</h4>
+							<h1 class="section-banner__heading my-0 font-weight-light">
+								Time to make your wealth work for you
+							</h1>
 						</div>
 					</div>
+				</section><!-- Slide 1 ends -->
 
-				</div>
-			</section><!-- Slide 4 ends -->
+				<!-- Section 2 - The floating Images-->
+				<section class="tt-main__section section-absolute min-height position-relative" style="background-color: var(--primaryCat);">
+					<div class="container">
+						<div class="section-absolute__content text-negative">
+							<h2 class="section-absolute__heading my-0">
+								Building a lasting legacy for individuals, families and businesses globally
+							</h2>
+						</div>
+					</div>
+					<div class="section-absolute__images position-relative">
+						<h2 class="section-absolute__entry">business</h2>
+						<img src="img/section-img-1.jpg" alt="section image 1" class="img-responsive img-1 object-cover" />
+						<img src="img/section-img-2.jpg" alt="section image 2" class="img-responsive img-2 object-cover" />
+						<img src="img/section-img-3.jpg" alt="section image 3" class="img-responsive img-3 object-cover" />
+					</div>
+				</section><!-- Slide 2 ends -->
+
+				<!-- Section 3 - Fixed Images-->
+				<section class="tt-main__section fixed-image min-height position-relative">
+					<img src="img/fixed-img.jpg" alt="section image 1" class="img-responsive img-1 object-cover" />
+				</section><!-- Slide 3 ends -->
 
 
+				<!-- Section 4 - Fixed Images-->
+				<section class="tt-main__section stories min-height position-relative" style="background-color: var(--secondaryCat)">
+					<div class="container d-flex align-items-center justify-content-center flex-column">
+						<!-- Content -->
+						<div class="stories__content">
+							<h3 class="stories__heading">Success stories our capabilities in action</h3>
+						</div>
+						<!-- Nav -->
+						<div class="stories__nav">
+							<ul class="d-flex align-items-center nav" aria-label="Stories Navigation" role="list">
+								<li><a href="#">Private clients</a></li>
+								<li><a href="#">Corporates</a></li>
+								<li><a href="#">Insights</a></li>
+								<li><a href="#">Contact</a></li>
+							</ul>
+						</div>
+						<!-- Cover and badge -->
+						<div class="stories__cover">
+							<img src="img/stories-img.jpg" alt="Stories Image" class="img-responsive">
+							<div class="heading-wrapper secondary-font">
+								<span class="text-1">Diversifying for</span>
+								<span class="text-2">a more secure future</span>
+							</div>
+							<div class="cover-wrapper position-relative">
+								<h3 class="cover-text mb-0">Diversifying for a more secure future</h3>
+								<span class="enquiry-badge">Make Enquiry</span>
+							</div>
+						</div>
 
-		</main>
+					</div>
+				</section><!-- Slide 4 ends -->
 
+			</div><!-- Main wrapper -->
+
+		</main><!-- Slides wrapper -->
 	</div><!-- Theme wrapper -->
 
 	<!-- Scripts/CDN call -->
@@ -160,6 +162,9 @@
 
 	<!-- App JS call -->
 	<script src="js/app.js"></script>
+
+	<!-- Scrollbar plugin -->
+	<script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
 	
 </body>
 </html>

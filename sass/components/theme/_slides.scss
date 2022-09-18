@@ -1,10 +1,18 @@
 
 // Common section/slide code
 .tt-main{
+	@include bp(tablet-md){
+		display: flex;	
+		height: 100vh;
+	}
 	@include bp(tablet-sm){
 		overflow-x: hidden;	
 	}
 	&__section{
 		// width: 100vw;
+		@include bp(tablet-md){
+			flex: 1 0 100vw;
+			height: 100%;
+		}
 	}
 }

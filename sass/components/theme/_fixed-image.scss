@@ -3,7 +3,7 @@
 .fixed-image{
 	width: 100%;
 	@include bp(tablet-md){
-		width: 727px;
+		flex: 1 0 727px;
 	}
 	@include bp(tablet-sm){
 		min-height: auto;

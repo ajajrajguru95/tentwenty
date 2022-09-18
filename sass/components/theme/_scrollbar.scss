@@ -1,0 +1,15 @@
+
+.mCustomScrollbar{
+	 .mCSB_scrollTools{
+		&.mCSB_scrollTools_horizontal{
+			opacity: 0;
+		}
+	 }
+	// Plugin classes
+	.mCustomScrollBox:hover>.mCSB_scrollTools, &.mCustomScrollBox:hover~.mCSB_scrollTools, &.mCustomScrollbar>.mCustomScrollBox>.mCSB_scrollTools.mCSB_scrollTools_onDrag, &.mCustomScrollbar>.mCustomScrollBox~.mCSB_scrollTools.mCSB_scrollTools_onDrag{
+		opacity: 0;
+	}
+	.mCSB_horizontal.mCSB_inside>.mCSB_container{
+		margin-bottom: 0;
+	}
+}
