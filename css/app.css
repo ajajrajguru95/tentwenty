@@ -1205,3 +1205,26 @@ button:focus, button.btn:focus {
   -webkit-transform: translateY(-50%) rotate(-135deg);
           transform: translateY(-50%) rotate(-135deg);
 }
+
+.theme-wrapper:after {
+  content: "";
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  right: 0;
+  height: 100%;
+  background-color: rgba(233, 221, 207, 0.7);
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+  -webkit-transition: width 1s cubic-bezier(0.78, 0.32, 0.22, 0.74) 0ms, background-color 1s cubic-bezier(0.78, 0.32, 0.22, 0.74) 0ms, -webkit-transform 1s ease;
+  transition: width 1s cubic-bezier(0.78, 0.32, 0.22, 0.74) 0ms, background-color 1s cubic-bezier(0.78, 0.32, 0.22, 0.74) 0ms, -webkit-transform 1s ease;
+  transition: width 1s cubic-bezier(0.78, 0.32, 0.22, 0.74) 0ms, background-color 1s cubic-bezier(0.78, 0.32, 0.22, 0.74) 0ms, transform 1s ease;
+  transition: width 1s cubic-bezier(0.78, 0.32, 0.22, 0.74) 0ms, background-color 1s cubic-bezier(0.78, 0.32, 0.22, 0.74) 0ms, transform 1s ease, -webkit-transform 1s ease;
+}
+.theme-wrapper.raiseCurtain:after {
+  width: 0;
+  height: 100%;
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}

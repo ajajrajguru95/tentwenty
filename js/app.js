@@ -4,6 +4,10 @@ let mq = window.matchMedia( "(max-width: 991px)" );
 
 jQuery(document).ready(function($){  
 
+  // Load animation - Curtain
+  setTimeout(function(){
+    $('.theme-wrapper').addClass('raiseCurtain');
+  },800);
 	// Navigation icon click
 	$('.nav-icon').on('click', function(event){
        $(this).toggleClass('active');

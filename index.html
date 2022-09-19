@@ -25,7 +25,7 @@
 					<!-- Site logo -->
 					<div class="tt-header__logo">
 						<a href="#" class="tt-header__anchor d-flex" aria-label="Home Link">
-							<!-- Used inline SVG to change fill -->
+							<!-- Used inline SVG to change fill on scroll -->
 							<svg width="70" height="28" viewBox="0 0 70 28" fill="none">
 								<path d="M0.310059 22V0.550049H5.17006V18.19H13.9001V22H0.310059Z" fill="white"/>
 								<path d="M20.8842 17.7701C21.5642 18.6101 22.5142 19.03 23.7342 19.03C24.9542 19.03 25.8942 18.6101 26.5542 17.7701C27.2342 16.93 27.5742 15.76 27.5742 14.26V14.05C27.5742 12.55 27.2342 11.3801 26.5542 10.5401C25.8942 9.68005 24.9542 9.25005 23.7342 9.25005C22.5342 9.25005 21.5942 9.67005 20.9142 10.51C20.2342 11.33 19.8942 12.49 19.8942 13.99V14.23C19.8942 15.73 20.2242 16.91 20.8842 17.7701ZM23.7042 22.3301C21.3242 22.3301 19.3542 21.6 17.7942 20.14C16.2342 18.66 15.4542 16.72 15.4542 14.32V14.0801C15.4542 11.6601 16.2342 9.70005 17.7942 8.20005C19.3542 6.70005 21.3342 5.95005 23.7342 5.95005C26.1342 5.95005 28.1042 6.69005 29.6442 8.17005C31.2042 9.63005 31.9842 11.57 31.9842 13.99V14.23C31.9842 16.67 31.2042 18.6301 29.6442 20.1101C28.0842 21.59 26.1042 22.3301 23.7042 22.3301Z" fill="white"/>
@@ -36,7 +36,7 @@
 					</div><!-- Logo ends -->
 					<!-- Meeting Btn - Mobile -->
 					<div class="mobile-ham-wrapper desktop-hide">
-						<a href="#" class="tt-header__btn tt-btn" role="button">Book A meeting</a>
+						<a href="#" class="tt-header__btn tt-btn" role="button" aria-label="Book Meeting Mobile">Book A meeting</a>
 						<div class="nav-icon">
                             <span></span>
                             <span></span>
@@ -61,8 +61,8 @@
 								<li><a href="#">Careers</a></li>
 							</ul>
 							<!-- Search Form -->
-							<form action="/search" method="get" class="tt-header__search">
-							    <input class="search expandright" id="searchright" type="search" name="q" placeholder="Search">
+							<form action="/search" method="get" class="tt-header__search" aria-label="Search Form">
+							    <input class="search expandright" id="searchright" type="search" name="q" placeholder="Search" >
 							    <label class="button searchbutton cursor-pointer" for="searchright">
 							    	<span class="mglass d-flex">
 							    		<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -72,7 +72,7 @@
 								</label>
 							 </form>
 							 <!-- Meeting Btn - Desktop -->
-							 <a href="#" class="tt-header__btn tt-btn mobile-hide" role="button">Book A meeting</a>
+							 <a href="#" class="tt-header__btn tt-btn mobile-hide" role="button" aria-label="Book Meeting Desktop">Book A meeting</a>
 
 						</div><!-- Secondar nav/CTA ends -->
 					</div>
@@ -160,7 +160,7 @@
 
 	<!-- Scrollbar plugin -->
 	<script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
-	
+
 	<!-- App JS call -->
 	<script src="js/app.js"></script>
 	

@@ -1,1 +1,25 @@
 // Front Page styles
+
+// Page Load entrance transition
+.theme-wrapper{
+	&:after{
+		content: '';
+		z-index: 1;
+		position: fixed;
+		top: 0;
+		width: 100%;
+		right: 0;
+		height: 100%;
+		background-color: rgb(233 221 207 / 70%);
+		transform: translateZ(0);
+		transition: width 1s cubic-bezier(0.78, 0.32, 0.22, 0.74) 0ms,background-color 1s cubic-bezier(0.78, 0.32, 0.22, 0.74) 0ms,transform 1s ease;
+	}
+	&.raiseCurtain{
+		&:after{
+			width: 0;
+			height: 100%;
+			transform: scaleX(1);
+		}
+	}
+}
+
