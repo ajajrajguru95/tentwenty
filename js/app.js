@@ -7,7 +7,8 @@ jQuery(document).ready(function($){
   // Load animation - Curtain
   setTimeout(function(){
     $('.theme-wrapper').addClass('raiseCurtain');
-  },800);
+  },600);
+
 	// Navigation icon click
 	$('.nav-icon').on('click', function(event){
        $(this).toggleClass('active');
@@ -47,14 +48,16 @@ let observer = new IntersectionObserver((entries) => {
     if (entry.isIntersecting) {
       intersectionHandler(entry);
     } 
-   console.log(entry);
+   // console.log(entry);
   });
 }, config);
 
+// Observer
 sections.forEach(section => {
   observer.observe(section);
 });
 
+// Function to add active to section as scrolled and update positive and negative variables
 function intersectionHandler(entry) {
    const current = document.querySelector('.tt-main__section.active');
   const next = entry.target;
@@ -69,7 +72,6 @@ function intersectionHandler(entry) {
   }
   if (next) {
     next.classList.add('active');
-    // document.body.style.setProperty("--color-bg", next.dataset.bgcolor);
     if((next.classList.contains('section-absolute')) && !(mq.matches)){
     	document.querySelector('.tt-header').classList.add('negative');
     	document.body.style.setProperty("--positive", negative);

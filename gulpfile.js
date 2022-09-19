@@ -40,13 +40,6 @@ function style() {
 
 function watch(){
     //   browserSync.init({
-    //     // You can tell browserSync to use this directory and serve it as a mini-server
-    //    proxy: "http://localhost/maxeta", //Change to your installed directory name
-    //     notify: true
-    //     // If you are already serving your website locally using something like apache
-    //     // You can use the proxy setting to proxy that instead
-    //     // proxy: "yourlocal.dev"
-    // });
     // gulp.watch takes in the location of the files to watch for changes
     // and the name of the function we want to run on change
 

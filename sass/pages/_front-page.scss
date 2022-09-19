@@ -8,16 +8,16 @@
 		position: fixed;
 		top: 0;
 		width: 100%;
-		right: 0;
+		left: 0;
 		height: 100%;
-		background-color: rgb(233 221 207 / 70%);
+		background-color: rgb(233 221 207 / 78%);
 		transform: translateZ(0);
-		transition: width 1s cubic-bezier(0.78, 0.32, 0.22, 0.74) 0ms,background-color 1s cubic-bezier(0.78, 0.32, 0.22, 0.74) 0ms,transform 1s ease;
+		transition: height 1s cubic-bezier(0.78, 0.32, 0.22, 0.74) 0ms,background-color 0.35s cubic-bezier(0.78, 0.32, 0.22, 0.74) 0ms,transform 0.35s ease;
 	}
 	&.raiseCurtain{
 		&:after{
-			width: 0;
-			height: 100%;
+			// width: 0;
+			height: 0;//100%;
 			transform: scaleX(1);
 		}
 	}
